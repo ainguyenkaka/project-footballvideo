@@ -1,0 +1,50 @@
+application: footballvideos-fv
+version: alpha-001
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /
+  script: app/views/index.php
+  
+- url: /videos
+  script: app/views/all-videos.php
+  
+- url: /watching
+  script: app/views/watch-video.php
+
+- url: /login
+  script: app/views/login.php
+  
+- url: /test
+  script: app/views/test.php
+
+- url: /userController
+  script: app/controllers/userController.php
+  
+- url: /admin/videoController
+  script: app/controllers/videoController.php
+  
+- url: /css
+  static_dir: app/views/css
+  
+- url: /js
+  static_dir: app/views/js
+
+- url: /img
+  static_dir: app/views/img
+  
+- url: /font
+  static_dir: app/views/font
+
+- url: /admin/
+  script: app/admin/index.php
+
+- url: /admin/videos
+  script: app/admin/videos.php
+
+- url: /admin/updateVideo
+  script: app/admin/update-video.php
+  
+- url: /admin/newVideo
+  script: app/admin/new-video.php
